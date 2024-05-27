@@ -22,18 +22,20 @@
 
 
  <style>
-   .home__container {
+.home__container {
   padding-top: 2rem;
   row-gap: 2.5rem;
 }
 
 .home__data {
-  text-align: center;
+   text-align: left;
+
 }
 
 .home__title {
   font-size: var(--biggest-font-size);
   margin-bottom: 1rem;
+  
 }
 
 .home__description {
@@ -41,18 +43,18 @@
 }
 
 .home__images {
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%; 
-  overflow: hidden; 
+  height: 100%;
+  overflow: hidden;
 }
 
 .home__images img {
-  max-width: none; 
-  width: 540px; 
-  height: auto; 
-  object-fit: contain; 
+  width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+  height: 100%; /* La imagen ocupará todo el alto del contenedor */
+  object-fit: cover; /* La imagen cubrirá completamente el contenedor */
 }
+
  </style>
