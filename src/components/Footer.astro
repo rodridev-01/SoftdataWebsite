@@ -1,0 +1,165 @@
+<footer class="footer">
+    <div class="footer__container container grid">
+        <div>
+            <a href="#" class="footer__logo">
+                <i class="ri-line-chart-fill"></i>Sofdata
+            </a>
+
+            <p class="footer__description">
+                Evoluciona estratégicamente<br />
+                tu negocio <br />
+                con el poder de los datos.
+            </p>
+        </div>
+
+        <div class="footer__data grid">
+            <div>
+                <h3 class="footer__title">Nosotros</h3>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">FaQs</a>
+                    </li>
+                </ul>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link"
+                            >Politica de Privacidad</a
+                        >
+                    </li>
+                </ul>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link"
+                            >Terminos de Privacidad</a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">Equipo</h3>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Blog</a>
+                    </li>
+                </ul>
+                <ul class="footer__links">
+                    <li>
+                        <a href="#" class="footer__link">Help Center</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">Contacto</h3>
+                <ul class="footer__links">
+                    <li>
+                        <address class="footer__info">
+                            softdatainfo1@gmail.com <br />
+                            +51 954 398 448
+                        </address>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">Social</h3>
+                <div class="footer__social">
+                    <a
+                        href="https://www.facebook.com/profile.php?id=61553893333483"
+                        target="_blank"
+                        class="footer__social-link"
+                    >
+                        <i class="ri-facebook-circle-line"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/rodrigou.py?igsh=MWc1OWh4d2Vpano4OA=="
+                        target="_blank"
+                        class="footer__social-link"
+                    >
+                        <i class="ri-instagram-line"></i>
+                    </a>
+
+                    <a
+                    href="https://youtu.be/oKBwWQI-IoI?si=wMmp3lV0HV_Q1VtW"
+                    target="_blank"
+                    class="footer__social-link"
+                >
+                <i class="ri-youtube-line"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span class="footer__copy"> &#169; All Rights Reserved By Sofdata </span>
+</footer>
+
+<style>
+    .footer {
+        padding-block: 4rem 6rem;
+    }
+
+    .footer__container {
+        row-gap: 3rem;
+    }
+
+    .footer__logo {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        color: var(--first-color);
+        font-size: var(--h3-font-size);
+        font-family: var(--h3-font-size);
+        margin-bottom: 1.25rem;
+    }
+
+    .footer__logo i {
+        font-size: 1.25rem;
+    }
+
+    .footer__data {
+        grid-template-columns: repeat(2, max-content);
+        gap: 3rem 2rem;
+    }
+
+    .footer__title {
+        font-size: var(--h3-font-size);
+        margin-bottom: 1.25rem;
+    }
+
+    .footer__links {
+        display: grid;
+        row-gap: 0.5rem;
+    }
+
+    .footer__link {
+        color: var(--text-color);
+        transition: color 0.4s;
+    }
+
+    .footer__link: hover {
+        color: var(--first-color);
+    }
+
+    .footer__info {
+        font-style: normal;
+    }
+
+    .footer__social {
+        display: flex;
+        column-gap: 1.25rem;
+    }
+
+    .footer__social-link {
+        font-size: 1.25rem;
+        color: var(--first-color);
+    }
+    .footer__copy {
+        display: block;
+        margin-bottom: 5rem;
+        text-align: center;
+        font-size: var(--small-font-size);
+    }
+</style>

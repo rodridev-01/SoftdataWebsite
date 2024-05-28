@@ -7,6 +7,7 @@ const { title } = Astro.props;
 import Header from '../components/Header.astro';
 import Login from '../components/Login.astro';
 import Search from '../components/Search.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -23,8 +24,9 @@ import Search from '../components/Search.astro';
     <Login/>
 	</head>
 	<body>
-		<slot />
+		<slot /> 
 	</body>
+  <Footer/>
 </html>
 <style is:global>
 	@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap");
@@ -32,7 +34,7 @@ import Search from '../components/Search.astro';
 :root {
   --header-height: 3.5rem;
 
-  /*========== Colors ==========*/
+  /*========== Colores ==========*/
   --first-color: hsl(230, 62%, 56%);
   --title-color: hsl(230, 70%, 16%);
   --text-color: hsl(230, 16%, 45%);
@@ -41,7 +43,7 @@ import Search from '../components/Search.astro';
   --body-color: hsl(230, 100%, 96%);
   --container-color: hsl(230, 100%, 97%);
 
-  /*========== Font and typography ==========*/
+  /*========== Fuentes and typography ==========*/
   --body-font: "Montserrat", sans-serif;
   --second-font: "Montagu Slab", serif;
   --biggest-font-size: 2rem;
@@ -62,7 +64,7 @@ import Search from '../components/Search.astro';
   --z-fixed: 100;
 }
 
-/*========== Responsive typography ==========*/
+/*========== Responsive==========*/
 @media screen and (min-width: 1150px) {
   :root {
     --biggest-font-size: 3.5rem;
@@ -170,6 +172,11 @@ img {
   .nav__menu{
     padding-inline: 3rem;
   }
+
+  .footer__data{
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
 }
 /* For medium devices */
 @media screen and (min-width: 480px){
@@ -203,6 +210,10 @@ img {
   .home__container{
     grid-template-columns: 420px;
   }
+
+  .footer__data{
+    grid-template-columns: repeat(3,max-content);
+  }
 }
 
 @media screen and (min-width: 768px){
@@ -213,6 +224,11 @@ img {
   .home__data{
     width: 420px;
     justify-self: center;
+  }
+
+  .footer__container{
+    grid-template-columns: repeat(2,max-content);
+    justify-content: space-between;
   }
 }
 
@@ -251,6 +267,35 @@ img {
   .home__data{
     width: initial;
   }
+
+  .footer{
+    padding-block: 6rem 3rem;
+  }
+
+  .footer__data{
+    grid-template-columns: repeat(4,max-content);
+    column-gap: 4.5rem;
+  }
+  .footer__logo,
+  .footer__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: 1.5rem;
+  }
+  .footer__links{
+    row-gap: 1rem;
+  }
+
+  .footer__social{
+    column-gap: 1.5rem;
+  }
+
+  .footer__social-link{
+    font-size: 1.5rem;
+  }
+
+  .footer__copy{
+    margin-top: 7.5rem;
+  }
   }
 
   @media screen and (min-width: 1220px){
@@ -274,6 +319,16 @@ img {
   .home__img{
     width: 390px;
   }
+
+  /*scroll*/
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #014F79;
+    border-radius: 5rem;
+}
  }
 </style>
 <script src="/resource/js/main.js" is:inline></script>
