@@ -29,7 +29,7 @@ if(loginButton){
 }
 
 /* Menu hidden */
-if(searchClose){
+if(loginClose){
     loginClose.addEventListener('click', () =>{
         loginContent.classList.remove('show-login')
     })

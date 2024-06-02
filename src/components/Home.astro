@@ -9,7 +9,7 @@
              Apoyamos a las empresas en la gestión de los datos permitiendo analizar la información de manera organizada, creando conocimiento para la toma de decisiones.
           </p>
           <a href="proximamente" class="button">
-             Ver más
+            <i class="ri-phone-fill" style="padding-right:7px"></i>Contáctanos 
           </a>
        </div>
        <div class="home__images">
@@ -55,6 +55,18 @@
   width: 100%; /* La imagen ocupará todo el ancho del contenedor */
   height: 100%; /* La imagen ocupará todo el alto del contenedor */
   object-fit: cover; /* La imagen cubrirá completamente el contenedor */
+}
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  padding: 1rem 1.5rem;
+  transition: box-shadow .4s;
+  border-radius: 10px;
+}
+.button:hover{
+  box-shadow: 0 4px 32px hsla(230, 72%, 32%, .4);
 }
 
  </style>

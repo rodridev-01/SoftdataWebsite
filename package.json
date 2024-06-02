@@ -10,8 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.9.1",
     "@astrojs/check": "^0.7.0",
+    "astro": "^4.9.1",
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
     "typescript": "^5.4.5"
-  }
+  },
+  "description": "```sh npm create astro@latest -- --template basics ```",
+  "main": "app.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

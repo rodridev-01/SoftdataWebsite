@@ -2,9 +2,9 @@
 
 <header class="header" id="header">
     <nav class="nav container">
-       <a href="https://sofdata.netlify.app" class="nav__logo">
-          <i class="ri-line-chart-fill"></i>SoftData
-       </a>
+      <a href="/#" class="nav__logo">
+        <img src="/resource/img/Logo.png" alt="SoftData Logo">
+     </a>
        <div class="nav__menu">
           <ul class="nav__list">
              <li class="nav__item">
@@ -54,12 +54,12 @@
  </header>
 
 <style>
-   .header{
+  .header{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--body-color);
+  background-color: #014F79;
   z-index: var(--z-fixed);
   transition: box-shadow .4s, background-color .4s;
 }
@@ -78,9 +78,9 @@
   color: var(--first-color);
   font-weight: var(--font-medium);
 }
-
-.nav__logo i{
-  font-size: 1.25rem;
+.nav__logo img {
+  width: 100px; 
+  height: auto; 
 }
 
 @media screen and (max-width:1150px){
@@ -90,7 +90,7 @@
     left:0;
     right: 0;
     width: 100%;
-    background-color: var(--container-color);
+    background-color: #014F79;
     box-shadow: 0 -8px 32px hsla(0, 0%, 0%, .1);
     padding: 1.25rem 4rem;
     transition: background-color .4s;
@@ -106,6 +106,7 @@
 .nav__link{
   color: var(--text-color);
   transition: color .4s;
+  color: aliceblue;
 }
 
 .nav__link span{
@@ -117,7 +118,7 @@
 }
 
 .nav__link:hover{
-  color: var(--first-color);
+  color: #E79D1C;
 }
 
 .nav__actions{
@@ -131,10 +132,11 @@
   color: var(--title-color);
   cursor: pointer;
   transition: color .4s;
+  color: aliceblue;
 }
 
 .nav__actions i:hover{
-  color: var(--first-color);
+  color: #E79D1C;
 }
 /* Add shadow header */
 .shadow-header{
@@ -167,18 +169,7 @@
 .main {
   overflow: hidden; 
 }
-.button{
-  display: inline-block;
-  background-color: var(--first-color);
-  color: var(--white-color);
-  font-weight: var(--font-semi-bold);
-  padding: 1rem 1.5rem;
-  transition: box-shadow .4s;
-  border-radius: 10px;
-}
-.button:hover{
-  box-shadow: 0 4px 32px hsla(230, 72%, 32%, .4);
-}
+
 
 @media screen and (max-width: 320px){
   .container{
@@ -265,32 +256,11 @@
   .nav__link{
     font-weight: var(--font-medium);
   }
-
-  .home__data{
-    width: initial;
-  }
   }
 
   @media screen and (min-width: 1220px){
   .container{
     margin-inline: auto;
-  }
-
-  .home__container{
-    grid-template-columns: 435px 745px;
-    align-items: center;
-    padding-block: 7rem 2rem;
-  }
-
-  .home__data{
-    text-align: initial;
-  }
-  .home__description{
-    margin-bottom: 4rem;
-  }
-  .home__article,
-  .home__img{
-    width: 390px;
   }
  }
 </style>

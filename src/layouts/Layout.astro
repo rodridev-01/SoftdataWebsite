@@ -8,6 +8,7 @@ import Header from '../components/Header.astro';
 import Login from '../components/Login.astro';
 import Search from '../components/Search.astro';
 import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -19,11 +20,37 @@ import Footer from '../components/Footer.astro';
 		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+    <link rel="stylesheet" href="/resource/cookies/pdcc.min.css">
+<script charset="utf-8" src="/resource/cookies/pdcc.min.js"></script>
+<script type="text/javascript">
+PDCookieConsent.config({
+"defaultLang" : "es",
+"brand": {
+"dev" : false,
+"name": "Sofdata",
+"url" : "https://localhost",
+"websiteOwner" : "Sofdata"
+},
+"cookiePolicyLink": "http://localhost/cookies.php",
+"hideModalIn": ["http://localhost/cookies.php"],
+"styles": {
+"primaryButton": {
+"bgColor" : "#A1FFA1",
+"txtColor": "#036900"
+},
+"secondaryButton": {
+"bgColor" : "#EEEEEE",
+"txtColor": "#333333"
+}
+}
+});
+</script>
 		<Header/>
     <Search/>
     <Login/>
 	</head>
 	<body>
+    <ViewTransitions/>
 		<slot /> 
 	</body>
   <Footer/>
