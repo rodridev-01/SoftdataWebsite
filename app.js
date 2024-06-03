@@ -1,60 +1,52 @@
 import { MongoClient } from 'mongodb';
 import bcrypt from 'bcrypt';
 
-const uri = 'mongodb+srv://tenientelangley:c6LlVaD0h272w1WD@dva.qzfi311.mongodb.net/?retryWrites=true&w=majority&appName=dva';
+// Reemplaza esta URI con tu propia información de MongoDB Atlas
+const uri = 'mongodb+srv://tenientelangley:c6LlVaD0h272w1WD@dva.qzfi311.mongodb.net/loginDB?retryWrites=true&w=majority';
 
+// Crear un cliente MongoClient
 const client = new MongoClient(uri);
 
-async function connectToDatabase() {
-  try {
-    await client.connect();
-    console.log("Conectado a MongoDB Atlas");
-  } catch (error) {
-    console.error("Error al conectar a MongoDB Atlas:", error);
-    throw error;
-  }
-}
-
-async function createUser(email, password) {
-  const database = client.db('loginDB');
-  const usersCollection = database.collection('users');
-
-  const hashedPassword = await bcrypt.hash(password, 10);
-  const result = await usersCollection.insertOne({
-    email: email,
-    password: hashedPassword
-  });
-
-  console.log(`Documento insertado con el _id: ${result.insertedId}`);
-}
-
-async function verifyUser(email, password) {
-  const database = client.db('loginDB');
-  const usersCollection = database.collection('users');
-
-  const user = await usersCollection.findOne({ email: email });
-  if (user && await bcrypt.compare(password, user.password)) {
-    console.log('Login successful');
-  } else {
-    console.log('Invalid email or password');
-  }
-}
-
-async function closeConnection() {
-  try {
-    await client.close();
-    console.log("Conexión cerrada");
-  } catch (error) {
-    console.error("Error al cerrar la conexión:", error);
-    throw error;
-  }
-}
-
 async function run() {
-  await connectToDatabase();
-  await createUser('admin@example.com', 'admin123');
-  await verifyUser('admin@example.com', 'admin123');
-  await closeConnection();
+    try {
+        // Conectar el cliente al servidor
+        await client.connect();
+        console.log("Conectado a MongoDB Atlas");
+
+        // Seleccionar la base de datos
+        const database = client.db('loginDB');
+
+        // Seleccionar la colección
+        const usersCollection = database.collection('users');
+
+        // Obtener el formulario
+        const form = document.getElementById('registration-form');
+
+        // Agregar un evento de envío al formulario
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+            
+            // Obtener los valores del formulario
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Insertar el usuario en la base de datos
+            const hashedPassword = await bcrypt.hash(password, 10);
+            const result = await usersCollection.insertOne({
+                username: username,
+                email: email,
+                password: hashedPassword
+            });
+
+            console.log(`Usuario registrado con el _id: ${result.insertedId}`);
+        });
+    } catch (error) {
+        console.error("Error:", error);
+    } finally {
+        // Asegúrate de que el cliente se cerrará cuando termines/error
+        await client.close();
+    }
 }
 
-run().catch(console.error);
+run().catch(console.dir);
