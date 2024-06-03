@@ -7,13 +7,53 @@
 </head>
 <body>
     <h1>Registration Form</h1>
-    <form id="registration-form" action="#">
+    <form id="registration-form">
         <input type="text" id="username" placeholder="Username" required/>
         <input type="email" id="email" placeholder="Email" required/>
         <input type="password" id="password" placeholder="Password" required/>
-        <input type="submit" value="Register"/>
+        <button type="submit">Registrar</button>
     </form>
 
-    <script type="module" src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('registration-form');
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+
+                    const usernameInput = document.getElementById('username');
+                    const emailInput = document.getElementById('email');
+                    const passwordInput = document.getElementById('password');
+
+                    // Cast the elements to HTMLInputElement to access the value property
+                    const username = usernameInput ? (usernameInput as HTMLInputElement).value : '';
+                    const email = emailInput ? (emailInput as HTMLInputElement).value : '';
+                    const password = passwordInput ? (passwordInput as HTMLInputElement).value : '';
+
+                    try {
+                        const response = await fetch('http://localhost:3001/register', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ username, email, password }),
+                        });
+
+                        if (response.ok) {
+                            alert('Usuario registrado con éxito');
+                        } else {
+                            const errorText = await response.text();
+                            alert('Error: ' + errorText);
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        alert('Error al registrar el usuario');
+                    }
+                });
+            } else {
+                console.error('El formulario no se encontró.');
+            }
+        });
+    </script>
 </body>
 </html>

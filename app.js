@@ -1,52 +1,62 @@
-import { MongoClient } from 'mongodb';
+import express from 'express';
+import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
+import path from 'path';
+import cors from 'cors'; // Importa cors
 
-// Reemplaza esta URI con tu propia información de MongoDB Atlas
-const uri = 'mongodb+srv://tenientelangley:c6LlVaD0h272w1WD@dva.qzfi311.mongodb.net/loginDB?retryWrites=true&w=majority';
+dotenv.config();
 
-// Crear un cliente MongoClient
-const client = new MongoClient(uri);
+const app = express();
 
-async function run() {
-    try {
-        // Conectar el cliente al servidor
-        await client.connect();
-        console.log("Conectado a MongoDB Atlas");
+// Configura CORS
+app.use(cors());
+// Conexión a la base de datos MongoDB Atlas
+mongoose.connect('mongodb+srv://tenientelangley:c6LlVaD0h272w1WD@dva.qzfi311.mongodb.net/?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('CONEXIÓN EXITOSA'))
+.catch((err) => console.log(err));
 
-        // Seleccionar la base de datos
-        const database = client.db('loginDB');
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(path.resolve(), 'public')));
 
-        // Seleccionar la colección
-        const usersCollection = database.collection('users');
+// Definición del esquema de usuario
+const userSchema = new mongoose.Schema({
+  username: String,
+  email: String,
+  password: String,
+});
 
-        // Obtener el formulario
-        const form = document.getElementById('registration-form');
+const User = mongoose.model('User', userSchema);
 
-        // Agregar un evento de envío al formulario
-        form.addEventListener('submit', async (event) => {
-            event.preventDefault(); // Evitar que el formulario se envíe automáticamente
-            
-            // Obtener los valores del formulario
-            const username = document.getElementById('username').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+// Ruta para registrar nuevos usuarios
+app.post('/register', async (req, res) => {
+  const { username, email, password } = req.body;
 
-            // Insertar el usuario en la base de datos
-            const hashedPassword = await bcrypt.hash(password, 10);
-            const result = await usersCollection.insertOne({
-                username: username,
-                email: email,
-                password: hashedPassword
-            });
+  if (!username || !email || !password) {
+    return res.status(400).send('Todos los campos son obligatorios');
+  }
 
-            console.log(`Usuario registrado con el _id: ${result.insertedId}`);
-        });
-    } catch (error) {
-        console.error("Error:", error);
-    } finally {
-        // Asegúrate de que el cliente se cerrará cuando termines/error
-        await client.close();
-    }
-}
+  const hashedPassword = await bcrypt.hash(password, 10);
+  const newUser = new User({
+    username,
+    email,
+    password: hashedPassword,
+  });
 
-run().catch(console.dir);
+  try {
+    await newUser.save();
+    res.status(201).send('Usuario registrado con éxito');
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error al registrar el usuario');
+  }
+});
+
+const PORT = process.env.PORT || 3002; // Cambia 3001 al puerto que desees
+app.listen(PORT, () => {
+  console.log(`Servidor en el puerto ${PORT}`);
+});
