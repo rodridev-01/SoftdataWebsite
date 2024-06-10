@@ -10,7 +10,7 @@
                     <!-- Menús -->
                     <ul class="navbar-nav flex">
                         <li><a href="/" class="nav-link active">Inicio</a></li>
-                        <li><a href="/about" class="nav-link">Nosotros</a></li>
+                        <li><a href="#about" class="nav-link">Nosotros</a></li>
                         <li><a href="/contact" class="nav-link">Contacto</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle">Paginas</a>
@@ -29,7 +29,7 @@
                     </ul>
                 </div>
                 <div class="nav-right flex">
-                    <p>Llámanos: <span>+51 938 790 848</span></p>
+                    <p>Llámanos: <a href="tel:+51 954398448"><span>+51 954 398 448</span></a></p>
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -467,37 +467,6 @@ aside .pages {
 
 .center-btn {
     gap: 1.5rem;
-}
-
-.btn_hover2 {
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50px;
-    border: 1.5px solid #E79D1C;
-    color: #fff;
-    z-index: 1;
-    letter-spacing: 0.8px;
-    background-color:#E79D1C;
-}
-
-.btn_hover2::before {
-    content: '';
-    border-radius: 50px;
-    position: absolute;
-    width: 0;
-    height: 100%;
-    transition: all 0.3s ease-in;
-    background: linear-gradient(180deg, #ff7527 0%, #fabf28 100%);
-    z-index: -1;
-    top: 0;
-    left: 0;
-}
-
-.btn_hover2:hover::before {
-    width: 100%;
-    border-radius: 50px;
-    background: linear-gradient(180deg, #ff7527 0%, #fabf28 100%);
 }
 
 .center-btn a {

@@ -1,69 +1,147 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre nosotros</title>
-    <style>
-        .container {
-            width: 100%;
-            max-width: 1657px;
-            display: flex;
-            flex-direction: column; /* Stack content vertically */
-            justify-content: center;
-            align-items: center;
-            border: 1px solid black;
-            box-sizing: border-box;
-            padding: 2rem; /* Adjust padding as needed */
-            background-color: #f5f5f5; /* Optional background color */
-        }
+<section class="about" id="about">
+    <div class="container mx-auto px-4">
+        <div class="about-data flex flex-wrap">
+            <div class="w-full md:w-1/2 px-4">
+                <div class="flex about-title gap-1 mb-4">
+                    <hr>
+                    <h5>NOSOTROS</h5>
+                </div>
+                <h2 class="text-white mb-4">Potenciando tu Presencia en Línea</h2>
+                <p class="text-white mb-4">
+                    En nuestro equipo, desarrollamos soluciones creativas y personalizadas para mejorar tu presencia en línea. Nos especializamos en analítica de datos y Big Data, convirtiendo tus ideas en acciones estratégicas que impulsarán tu crecimiento.
+                </p>
+                <div class="flex gap-1 mt-4">
+                    <i class="fa-solid fa-check"></i>
+                    <h5 class="text-white">Impulsamos tu presencia en línea.</h5>
+                </div>
+                <div class="flex gap-1 mt-4">
+                    <i class="fa-solid fa-check"></i>
+                    <h5 class="text-white">Convertimos tus ideas en estrategias efectivas.</h5>
+                </div>
+                <div class="flex mt-8 gap-4">
+                    <a href="mailto:softdatainfo1@gmail.com" target="_blank" class="btn_hover1">Empecemos</a>
+                    <a href="test" class="btn_hover2">Mostrar Más</a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 flex justify-center relative px-4 mt-8 md:mt-0">
+                <div class="about-imgs">
+                    <figure>
+                        <img src="/New/home/about.png" alt="img">
+                    </figure>
+                    <div class="ab-count flex flex-col justify-center items-center">
+                        <div class="flex items-center">
+                            <h2>5</h2>
+                            <h2>+</h2>
+                        </div>
+                        <p>años de experiencia</p>
+                    </div>
+                    <div class="about-hr">
+                        <hr>
+                        <h6>¿Quiénes somos?</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        .container h2 {
-            font-size: 2rem; /* Adjust heading size as needed */
-            margin-bottom: 1rem; /* Add space between heading and paragraph */
-        }
-
-        .container p {
-            font-size: 1rem; /* Adjust paragraph font size as needed */
-            line-height: 1.5; /* Adjust line spacing as needed */
-            text-align: center; /* Center paragraph text */
-        }
-    </style>
-</head>
-<body>
-    <div class="container" id="nosotros">
-        <h2>Sobre nosotros</h2>
-        <p>Somos una empresa dedicada al análisis de datos y Big Data. Contamos con 5 años de experiencia en el mercado y un equipo altamente calificado de científicos de datos, ingenieros y expertos en la industria para brindarte las mejores soluciones en análisis de datos y Big Data.</p>
-        <p>Nuestra misión es empoderar a las empresas con información valiosa a partir de sus datos para que puedan tomar decisiones más inteligentes, mejorar su eficiencia y alcanzar sus objetivos comerciales.</p>
-        <p>Nuestra visión es ser el socio líder en análisis de datos y Big Data para las empresas de todos los sectores, ayudándolas a transformar sus datos en conocimiento y valor.</p>
-        <p>Trabajamos con pasión y compromiso para:</p>
-        <ul>
-            <li>Descubrir insights ocultos en tus datos.</li>
-            <li>Desarrollar soluciones de análisis de datos personalizadas para tus necesidades específicas.</li>
-            <li>Implementar soluciones de Big Data que escalen con tu negocio.</li>
-            <li>Brindarte un servicio al cliente excepcional.</li>
-        </ul>
-        <p>Ofrecemos una amplia gama de servicios de análisis de datos y Big Data, que incluyen:</p>
-        <ul>
-            <li>Análisis descriptivo: Recopilar, limpiar y organizar tus datos para obtener una comprensión básica de tu negocio.</li>
-            <li>Análisis exploratorio de datos: Visualizar y explorar tus datos para identificar patrones y tendencias.</li>
-            <li>Análisis predictivo: Utilizar modelos de aprendizaje automático para predecir futuros resultados.</li>
-            <li>Análisis prescriptivo: Recomendar acciones a tomar para mejorar tus resultados comerciales.</li>
-            <li>Minería de datos: Extraer información valiosa de grandes conjuntos de datos no estructurados.</li>
-            <li>Procesamiento del lenguaje natural: Analizar y comprender el lenguaje humano.</li>
-            <li>Visualización de datos: Crear visualizaciones atractivas y fáciles de entender para comunicar tus hallazgos.</li>
-        </ul>
-        <p>Ayudamos a las empresas de todos los sectores a utilizar el análisis de datos y Big Data para:</p>
-        <ul>
-            <li>Aumentar las ventas y el marketing.</li>
-            <li>Mejorar la atención al cliente.</li>
-            <li>Reducir costos y mejorar la eficiencia.</li>
-            <li>Gestionar riesgos.</li>
-            <li>Desarrollar nuevos productos y servicios.</li>
-            <li>Tomar mejores decisiones estratégicas.</li>
-        </ul>
-        <p>Si estás buscando una empresa de análisis de datos y Big Data confiable y experimentada, contáctanos hoy mismo.</p>
-        <p>Estaremos encantados de ayudarte a alcanzar tus objetivos comerciales.</p>
-        <p>Aquí hay algunos ejemplos de cómo podemos ayudarte:</p>
-        <ul>
-            <li>Una empresa minorista puede utilizar el análisis de datos para identificar qué productos se venden mejor y dónde deben colocarse en la tienda.</li>
+<style>
+.about {
+    background: #1B2A4C;
+    padding: 100px 0;
+}
+.about hr {
+    opacity: 1.25;
+    height: 1px;
+    color: #E79D1C;
+    width: 60px;
+    border: 1px solid;
+}
+.about-data h2, .about-data p, .about h5, .about-hr h6 {
+    color: #fff;
+}
+.about h5 {
+    font-weight: 400;
+    font-family: 'barlow', sans-serif;
+}
+.about i {
+    border: 2px solid #fa982f;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 20px;
+    background: linear-gradient(66deg, #f54a48 0.87%, #fa982f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about-data a {
+    padding: 16px 38px !important;
+}
+.about-imgs {
+    position: relative;
+    background-image: url('/New/bg/about-bg.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.about-imgs figure {
+    background: #E79D1C;
+    width: fit-content;
+    clip-path: circle(45% at 50% 50%);
+    transition: all 0.8s ease;
+}
+.about-imgs figure:hover {
+    transform: scale(1.05);
+    transition: all 0.8s ease;
+}
+.about-imgs img {
+    width: 85%;
+    display: block;
+    margin: auto;
+    clip-path: circle(48% at 50% 50%);
+}
+.ab-count {
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(180deg, #ff7527 0%, #fabf28 100%);
+    color: #fff;
+    position: absolute;
+    bottom: -18px;
+    left: 118px;
+    border-radius: 50%;
+    width: 175px;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ab-count h2 {
+    margin: 0;
+}
+.ab-count p {
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.about-hr {
+    color: #fff;
+    position: absolute;
+    right: -50px;
+    bottom: 25px;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+}
+.about-hr hr {
+    opacity: 1.25;
+    height: 1px;
+    border: 1px solid #E79D1C;
+    width: 60px;
+}
+.about-hr h6 {
+    letter-spacing: 3.72px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: 10px;
+}
+</style>
