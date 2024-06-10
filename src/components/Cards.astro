@@ -92,4 +92,24 @@
     text-transform: uppercase;
     margin: 20px 0 12px 0;
 }
+@media (max-width: 767px) {
+    .flex {
+        flex-wrap: wrap; /* Permitir que los elementos se envuelvan a una nueva línea */
+        gap: 20px; /* Espacio entre las cartas */
+    }
+
+    .header-card {
+        flex: 0 0 100%; /* Una carta por fila en dispositivos móviles */
+        margin-top: 0; /* Eliminar el margen superior */
+    }
+
+    .header-card div {
+        padding: 30px; /* Aumentar el padding para hacer los elementos más anchos */
+    }
+
+    .header-card h4 {
+        width: auto; /* Ancho automático para el título */
+        text-align: center; /* Centrar el texto */
+    }
+}
 </style>
