@@ -1,0 +1,199 @@
+<section class="service" id="service">
+    <div class="service-1">
+        <div class="container">
+            <div class="service-data">
+                <div class="w-66">
+                    <div class="flex gap-1">
+                        <hr class="service_hr1">
+                        <h5>SERVICIOS</h5>
+                    </div>
+                    <h2 class="m-15">Descubre nuestros servicios</h2>
+                    <p class="m-15">En nuestro amplio catálogo de soluciones, ofrecemos servicios especializados diseñados para impulsar el éxito de tu empresa. Desde consultoría estratégica hasta implementación técnica, estamos aquí para ayudarte a alcanzar tus objetivos con confianza y eficacia.</p>
+                </div>
+                <div class="w-33 mt-15 flex flex-end">
+                    <a href="/" class="btn_hover2">Ver todos los servicios</a>
+                </div>
+                <hr>
+            </div>
+            <div class="flex s-card">
+                <div class="service-card">
+                    <h3>Consultoría</h3>
+                    <p>Diseñamos, desarrollamos e implementamos sistemas de integración de datos que permitan su correcto análisis. Contamos con un equipo experto para dar solución a la gestión de los datos que requieran las empresas instituciones.</p>
+                    <a href="/">Leer Más<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <h3>Soporte</h3>
+                    <p>Analizamos, gestionamos y hacemos seguimiento constante a todas las plataformas de datos de su empresa, para sugerir posibles soluciones y mejora continua con el objetivo de lograr un ecosistema de datos conectados que respalde las tomas de decisiones informadas.</p>
+                    <a href="/">Leer Más<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <h3>Gestión de Datos</h3>
+                    <p>Proporcionamos consultoría, desarrollo e implementación de sistemas de integración de datos, junto con soporte continuo para garantizar un ecosistema de datos conectados y decisiones informadas.</p>
+                    <a href="/">Leer Más<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .service-1 {
+        background: #181C35;
+        padding: 80px 0;
+    }
+
+    .service-data {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .service-1 h5 {
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    .service-1 h2 {
+        color: #fff;
+        margin-bottom: 15px;
+    }
+
+    .service-data p {
+        color: #d3c9c1;
+        margin-bottom: 20px;
+        max-width: 550px;
+    }
+
+    .service_hr1 {
+        opacity: 1.25;
+        height: 1px;
+        color: #E79D1C;
+        width: 60px;
+        border: 1px solid;
+    }
+
+    hr {
+        width: 100%;
+        opacity: 1.25;
+        height: 1px;
+        color: #E79D1C;
+        border: 1px solid;
+        margin-bottom: 30px;
+    }
+
+    .w-66 {
+        flex: 0 0 calc(66% - 30px);
+    }
+
+    .w-33 {
+        flex: 0 0 calc(33% - 30px);
+    }
+
+    .flex-end {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .btn_hover2 {
+        padding: 15px 30px;
+        border: 1px solid #ff7527;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btn_hover2:hover {
+        background-color: #ff7527;
+    }
+
+    .s-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .service-card {
+        border: 1px solid #1C85C5;
+        background: linear-gradient(11deg, #E79D1C 0.01%, #FFFB43 100%);
+        box-shadow: 8px 18px 30px 0 rgba(0, 0, 0, 0.2);
+        padding: 40px 30px;
+        width: calc(33% - 20px);
+        margin-bottom: 20px;
+        transition: transform 0.4s ease-in-out;
+        border-radius: 10px;
+    }
+
+    .service-card:hover {
+        transform: scale(1.05);
+    }
+
+    .service-card h3 {
+        color: #000;
+        margin: 20px 0;
+        letter-spacing: 1.25px;
+    }
+
+    .service-card p {
+        color: #000;
+        margin-bottom: 20px;
+        max-width: 300px;
+    }
+
+    .service-card a {
+        color: #1B1F2B;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .service-card a:hover {
+        color: #fff;
+        font-weight: 700;
+        gap: 8px;
+    }
+
+    .service-card figure {
+        background: #fff;
+        box-shadow: 10px 17px 28px 0 rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        padding: 12px;
+        width: 124px;
+        height: 85px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .service-card img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .service-data {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .w-66, .w-33 {
+            width: 100%;
+        }
+
+        .service-card {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .service-card {
+            width: calc(100% - 20px);
+        }
+    }
+</style>

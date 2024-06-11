@@ -1,0 +1,120 @@
+<section class="team bg-gray-100¿ py-10" id="team">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-8">
+            <div class="flex items-center gap-1">
+                <hr class="team-hr1" />
+                <h5 class="text-xl font-semibold text-white">Nuestro Equipo</h5>
+            </div>
+        </div>
+
+        <div class="team">
+            <div class="team-member">
+                <img src="/New/slider/m1.png" alt="member" />
+                <div class="overlay">
+                    <div class="overlay_text">
+                        <h3 class="font-semibold mb-2">Rodrigo Peña</h3>
+                        <h4 class="text-sm mb-4">Full Stack</h4>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/rodridev-01"
+                                ><i class="fab fa-github"></i></a
+                            >
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="/New/slider/m2.png" alt="member" />
+                <div class="overlay">
+                    <div class="overlay_text">
+                        <h3 class="font-semibold mb-2">Rene Quispe</h3>
+                        <h4 class="text-sm mb-4">Programador</h4>
+                        <div class="flex gap-2">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="/New/slider/m3.png" alt="member" />
+                <div class="overlay">
+                    <div class="overlay_text">
+                        <h3 class="font-semibold mb-2">Alex Olortegui</h3>
+                        <h4 class="text-sm mb-4">Diseñador</h4>
+                        <div class="flex gap-2">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <img src="/New/slider/m4.png" alt="member" />
+                <div class="overlay">
+                    <div class="overlay_text">
+                        <h3 class="font-semibold mb-2">Carlos Palomino</h3>
+                        <h4 class="text-sm mb-4">Programador</h4>
+                        <div class="flex gap-2">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    section {
+        background: url(/New/bg/hero_bg.png);
+    }
+
+    .team {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .team-member:hover img {
+            transform: scale(1.1); 
+        }
+    .team-member {
+        width: calc(25% - 20px);
+        margin-bottom: 20px;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 5px;
+    }
+
+    .team-member img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .overlay {
+        position: relative;
+    }
+
+    .overlay_text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .team-member {
+            width: 100%;
+        }
+    }
+</style>

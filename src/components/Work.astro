@@ -1,0 +1,154 @@
+
+    <section class="work">
+        <div class="container p-relative">
+            <div class="work-para text-center">
+                <h5>¿CÓMO TRABAJAMOS?</h5>
+                <h2>Nuestro proceso para obtener resultados</h2>
+                <p>En SoftData, entendemos la importancia de ofrecer soluciones efectivas y resultados tangibles a nuestros clientes. Nuestro proceso de trabajo se centra en comprender a fondo las necesidades de cada proyecto y desarrollar estrategias personalizadas para alcanzar los objetivos establecidos. Desde la planificación inicial hasta la implementación final, nos comprometemos a brindar un servicio excepcional y resultados de alta calidad en cada paso del camino.</p>
+            </div>
+            <div class="work-hr flex gap-1">
+                <hr>
+                <h6>PROYECTO EN PASOS</h6>
+            </div>
+            <div class="work-line flex flex-center gap-1 flex-wrap p-relative">
+                <div>
+                    <h2>01.</h2>
+                    <h4>Haga una cita</h4>
+                </div>
+                <div>
+                    <h2>02.</h2>
+                    <h4>Conozca a nuestro equipo</h4>
+                </div>
+                <div>
+                    <h2>03.</h2>
+                    <h4>Obtener consulta</h4>
+                </div>
+                <div>
+                    <h2>04.</h2>
+                    <h4>Iniciar proyectos</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .work {
+            background-color: #014F79;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .work-para h5 {
+            color: #181C35;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .work-para h2 {
+            color: #E79D1C;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .work-para p {
+            color: #fff;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .work-hr {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .work-hr hr {
+            flex-grow: 1;
+            border: none;
+            height: 1px;
+            background-color: #000;
+        }
+
+        .work-hr h6 {
+            color: #E79D1C;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        .work-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .work-line div {
+            flex: 1;
+            padding: 20px;
+            position: relative;
+        }
+
+        .work-line h2 {
+            color: #E79D1C;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .work-line h4 {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .work-line div:before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 30px;
+            background-color: #ccc;
+            z-index: -1;
+        }
+
+        .work-line div:first-child:before {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .work-line {
+                flex-direction: column;
+            }
+
+            .work-line div {
+                margin-bottom: 20px;
+            }
+
+            .work-line div:before {
+                left: auto;
+                transform: none;
+                top: 50%;
+                right: -10px;
+                width: 30px;
+                height: 1px;
+            }
+        }
+
+        /* Animación */
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .work-line div {
+            animation: slideUp 0.5s ease-in-out;
+        }
+    </style>
