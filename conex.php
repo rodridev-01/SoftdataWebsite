@@ -25,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         header('Location: index.astro');
         exit;
     } else {
-        // Credenciales inválidas, mostrar mensaje de error
         $error = "Credenciales inválidas. Por favor, inténtalo de nuevo.";
     }
 }
