@@ -4,26 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro e Inicio de Sesión</title>
-</head>
-<body>
-    <h2>Registro de Usuario</h2>
-    <form action="/resource/php/register.php" method="POST">
-        <label for="username">Nombre de Usuario:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Registrarse">
-    </form>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
 
-    <h2>Iniciar Sesión</h2>
-    <form action="/resource/php/login.php" method="POST">
-        <label for="login-username">Nombre de Usuario:</label>
-        <input type="text" id="login-username" name="username" required><br><br>
-        <label for="login-password">Contraseña:</label>
-        <input type="password" id="login-password" name="password" required><br><br>
-        <input type="submit" value="Iniciar Sesión">
-    </form>
+        .fade-in {
+            animation: fadeIn 1s forwards;
+        }
+
+        .fade-in-delay {
+            animation: fadeIn 1s forwards 1s;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-md space-y-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg fade-in">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Registro de Usuario</h2>
+            <form action="register.php" method="POST" class="space-y-4">
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700">Nombre de Usuario:</label>
+                    <input type="text" id="username" name="username" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+                                  placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 
+                                  sm:text-sm">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email:</label>
+                    <input type="email" id="email" name="email" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+                                  placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 
+                                  sm:text-sm">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700">Contraseña:</label>
+                    <input type="password" id="password" name="password" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+                                  placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 
+                                  sm:text-sm">
+                </div>
+                <div>
+                    <input type="submit" value="Registrarse"
+                           class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm 
+                                  font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none 
+                                  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                </div>
+            </form>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg fade-in-delay">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Iniciar Sesión</h2>
+            <form action="login.php" method="POST" class="space-y-4">
+                <div>
+                    <label for="login-username" class="block text-sm font-medium text-gray-700">Nombre de Usuario:</label>
+                    <input type="text" id="login-username" name="username" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+                                  placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 
+                                  sm:text-sm">
+                </div>
+                <div>
+                    <label for="login-password" class="block text-sm font-medium text-gray-700">Contraseña:</label>
+                    <input type="password" id="login-password" name="password" required
+                           class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm 
+                                  placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 
+                                  sm:text-sm">
+                </div>
+                <div>
+                    <input type="submit" value="Iniciar Sesión"
+                           class="w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm 
+                                  font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none 
+                                  focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

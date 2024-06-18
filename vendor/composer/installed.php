@@ -3,7 +3,7 @@
         'name' => 'softdata/web',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'fde729f30c9053ae5ce0bbf73f8349a3c8bcc239',
+        'reference' => 'f23b88f83ed93e017514817269538c059414d0a4',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -166,7 +166,7 @@
         'softdata/web' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'fde729f30c9053ae5ce0bbf73f8349a3c8bcc239',
+            'reference' => 'f23b88f83ed93e017514817269538c059414d0a4',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

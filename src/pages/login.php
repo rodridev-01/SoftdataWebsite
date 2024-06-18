@@ -1,6 +1,6 @@
 <?php
 
-require 'vendor/autoload.php'; 
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use MongoDB\Client as MongoDBClient;
 
@@ -18,7 +18,9 @@ if (!$user) {
 } else {
 
     if (password_verify($password, $user['password'])) {
-        echo "Inicio de sesión exitoso";
+        echo "Inicio de sesión exitoso. Serás redirigido en unos segundos...";
+        header("Refresh: 3; URL=https://sofdata.netlify.app"); 
+        exit;
     } else {
         echo "Nombre de usuario o contraseña incorrectos";
     }
