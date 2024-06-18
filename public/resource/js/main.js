@@ -40,7 +40,6 @@ function open_img(evt, cityName){
     
 
 
-//reponsive logoipsum slider
 $('.sliderlogo').slick({
     arrows: false,
     dots: false,
